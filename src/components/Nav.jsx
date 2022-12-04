@@ -1,20 +1,20 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import SearchBar from './SearchBar'
+import SearchBar from './Searchbar/SearchBar'
 
 const Nav = (props) => {
     return (
-            <div className=''>
-                <div>
+                <div> 
                 <Link to="/home">Home</Link>
-                <Link to="/about">About</Link>
-                <SearchBar onSearch={onSearch}
-                //   onSearch={(characterID) => window.alert(characterID)}
+                <br />
+                <Link to="About">About</Link>
+                <SearchBar onSearch={(characterId) => window.alert(characterId)}    
                 />
                 </div>
-            </div>
-     
+               
     )
 }
 
 export default Nav
+
+//onSearch={props.onSearch}
